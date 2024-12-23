@@ -1,0 +1,330 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+#wrap {
+    min-width: 1460px;
+}
+
+body {
+    font-family: 'S-CoreDream';
+    padding-top: 100px;
+    /* #top의 높이만큼 패딩 추가 */
+}
+
+
+.topwrap{
+    position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+ }
+ #top {
+     width: 100%;
+     box-sizing: border-box;
+     height: 160px;
+     position: relative;
+     position: fixed;
+     top: 0;
+     left: 0;
+     /* width: 100%; */
+     background: #fff;
+     z-index: 100;
+ 
+ 
+ }
+
+/* 햄버거 버튼 */
+.slide-open {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.burgur,
+.burgur::before,
+.burgur::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background: #777;
+    transition: all 0.3s ease-in-out;
+    left: 0;
+}
+
+.burgur {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burgur::before {
+    top: -10px;
+}
+
+.burgur::after {
+    top: 10px;
+}
+
+/* 햄버거 버튼 클릭 시 X 모양 변형 */
+.menu-open .burgur {
+    background: transparent;
+}
+
+.menu-open .burgur::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-open .burgur::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* 메뉴 스타일 */
+.menu {
+    position: fixed;
+    top: 160px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #fff;
+    transition: left 0.5s ease-in-out;
+    z-index: 98;
+    padding-top: 70px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 100px;
+}
+
+.menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #6ebeea;
+    font-size: 43px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -17px;
+    width: 0;
+    height: 5px;
+    background-color: #efb21e;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #efb21e;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+.menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+/* .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+} */
+.menu-open .menu {
+    left: 0;
+}
+
+
+.logo {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.cupon {
+    position: absolute;
+    top: 20px;
+    right: 145px;
+}
+
+.cupon img {
+    animation: cupon 3s infinite linear;
+}
+
+@keyframes cupon {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, 0);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.login {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+
+.login li a {
+    display: block;
+    padding-top: 65px;
+    padding-right: 30px;
+    font-weight: 400;
+    color: #444444;
+    opacity: 0.5;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.login li a:hover {
+    opacity: 1;
+}
+
+
+
+
+
+#banner{
+    background: url(../img/programbanner.png)
+    no-repeat;
+    height: 800px;
+}
+
+
+
+
+
+
+
+/* 푸터 */
+#footer {
+    border-top: 1px solid #999;
+     height: 450px;  
+     margin-top: 200px;
+     
+ }
+ .f_inner{
+     width: 1400px;
+     height: 250px;
+     margin: 95px auto;
+     text-align: center;
+     font-family: 300;
+     font-size: 18px;
+     color: #777;
+     box-sizing: border-box;
+    
+ }
+ .copy {
+     margin: 20px 0;
+ }
+ 
+ .footer_con {
+     padding-bottom: 30px;
+     line-height: 28px;
+ }

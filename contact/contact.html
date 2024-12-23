@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1460">
+    <title>BREEZE BEER 브랜드 웹사이트</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div id="wrap">
+
+        <div class="topwrap">
+        <div id="top">
+            
+
+                <div class="slide-open" id="hamburgerBtn">
+                    <div class="burgur"></div>
+                </div>
+                <div class="menu" id="menu">
+                    <div class="menu-header">
+                        <!-- <span class="close-btn" id="closeMenu">&times;</span> -->
+                    </div>
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../shop/shop.html">ONLINE-SHOP</a></li>
+                        <li><a href="../program/program.html">체험 프로그램 신청</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+
+
+                <h1 class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo1.png" alt="">
+                    </a>
+                </h1>
+
+                <div class="cupon">
+                    <img src="../img/cupon.png" alt="">
+                </div>
+                <ul class="login">
+                    <li><a href="../login/login.html">LOGIN</a></li>
+                    <li><a href="../login/login.html">JOIN</a></li>
+                    <li><a href="../login/login.html">CART</a></li>
+                </ul>
+            
+        </div>
+        </div>
+        <div id="title">
+            
+        </div>
+        
+        <div id="main">
+            <div class="contact_box">
+                <div class="contact_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.980711486035!2d126.96914197642991!3d37.55551822475897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca268cdbe4e95%3A0xbb230059fdd02004!2z7ISc7Jq47Jet!5e0!3m2!1sko!2skr!4v1718344341488!5m2!1sko!2skr" width="660px" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <form class="contact_text" action="#" name="contact">
+                    <h2>SUGGEST</h2>
+                    <ul class="question_box">
+                        <li class="question">
+                            <p>NAME</p>
+                            <input type="text" required/>
+                            
+                        </li>
+                        <li class="question">
+                            <p>EMAIL ADDRESS</p>
+                            <input type="text" required/>
+                            
+                        </li>
+                       
+                        <li class="question">
+                            <p>MESSAGE</p>
+                            <textarea required ></textarea>
+                            
+                        </li>
+                    </ul>
+
+                    <div class="more_btn_box">
+                       
+                       <button class="more_btn"type="submit">SUBMIT</button>
+                    </div>
+                </form>
+        </div>
+        </div>
+
+        <div id="footer">
+            <div class="f_inner">
+            <img class="f_logo" src="../img/f_logo.png" alt="">
+
+            <p class="copy">BREEZE BEER | 2021. ⓒ All RightsReserved. | 개인정보처리방침 | Terms and Conditions</p>
+
+            <div class="footer_con">
+                <p>제휴/협찬 문의 : Partnership@breeze.co.kr</p>
+                <p> 전화번호 : (02)2149-5000</p>
+                <p>상호명: 브리즈비어 주식회사</p>
+                <p>주소: 서울 특별시 용산구 한강대로 405</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#hamburgerBtn').click(function() {
+        $('body').toggleClass('menu-open');
+    });
+    
+    $('#closeMenu').click(function() {
+        $('body').removeClass('menu-open');
+    });
+});
+
+
+
+
+    let lastScrollTop = 0;
+    $(window).on('scroll', function() {
+        let scrollTop = $(this).scrollTop();
+        
+        if (scrollTop > lastScrollTop) {
+            // 스크롤 다운 시 #top 숨김
+            $('#top').slideUp();
+        } else {
+            // 스크롤 업 시 #top 나타남
+            $('#top').slideDown();
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    </script>
+</body>
+</html>

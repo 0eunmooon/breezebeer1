@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1460">
+    <title>BREEZE BEER 브랜드 웹사이트</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <div id="wrap">
+
+        <div class="topwrap">
+        <div id="top">
+            
+
+                <div class="slide-open" id="hamburgerBtn">
+                    <div class="burgur"></div>
+                </div>
+                <div class="menu" id="menu">
+                    <div class="menu-header">
+                        <!-- <span class="close-btn" id="closeMenu">&times;</span> -->
+                    </div>
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../shop/shop.html">ONLINE-SHOP</a></li>
+                        <li><a href="../program/program.html">체험 프로그램 신청</a></li>
+                        <li><a href="../contact/contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+
+
+                <h1 class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo1.png" alt="">
+                    </a>
+                </h1>
+
+                <div class="cupon">
+                    <img src="../img/cupon.png" alt="">
+                </div>
+                <ul class="login">
+                    <li><a href="./login.html">LOGIN</a></li>
+                    <li><a href="./login.html">JOIN</a></li>
+                    <li><a href="./login.html">CART</a></li>
+                </ul>
+            
+        </div>
+    </div>
+
+
+
+    <div id="main">
+        <div class="login_box">
+            <h2>로그인</h2>
+            <form class="contact_text" action="#" name="contact">
+                <ul>
+                    <li class="question">
+                        <input type="text" required/>
+                        <label>아이디</label>
+                    </li>
+                    <li class="question">
+                        <input type="text" required/>
+                        <label>비밀번호</label>
+                    </li>
+                    <li class="id">
+                        <input type="checkbox" name="아이디 저장"/>
+                        <label>아이디 저장</label>
+                    </li>
+                </ul>
+                <div class="more_btn_box">
+                    <button class="more_btn"type="submit">로그인</button>
+                </div>
+            </form>
+            <ol>
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ol>
+            <ul class="icon">
+                <li><a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/" target="_blank"><img src="../img/naver1.png" alt="네이버 로고"></a></li>
+                <li><a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fwww.daum.net#login" target="_blank"><img src="../img/kakao1.png" alt="카카오 로고"></a></li>
+            </ul>
+            <p class="gray">소셜아이디로 간편하게 로그인할 수 있습니다.</p>
+        </div><!--login_box-->
+    </div><!--main-->
+
+
+
+
+
+        <div id="footer">
+            <div class="f_inner">
+            <img class="f_logo" src="../img/f_logo.png" alt="">
+
+            <p class="copy">BREEZE BEER | 2021. ⓒ All RightsReserved. | 개인정보처리방침 | Terms and Conditions</p>
+
+            <div class="footer_con">
+                <p>제휴/협찬 문의 : Partnership@breeze.co.kr</p>
+                <p> 전화번호 : (02)2149-5000</p>
+                <p>상호명: 브리즈비어 주식회사</p>
+                <p>주소: 서울 특별시 용산구 한강대로 405</p>
+            </div>
+        </div>
+    </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#hamburgerBtn').click(function() {
+        $('body').toggleClass('menu-open');
+    });
+    
+    $('#closeMenu').click(function() {
+        $('body').removeClass('menu-open');
+    });
+});
+
+
+
+
+    let lastScrollTop = 0;
+    $(window).on('scroll', function() {
+        let scrollTop = $(this).scrollTop();
+        
+        if (scrollTop > lastScrollTop) {
+            // 스크롤 다운 시 #top 숨김
+            $('#top').slideUp();
+        } else {
+            // 스크롤 업 시 #top 나타남
+            $('#top').slideDown();
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    </script>
+
+    </body>
